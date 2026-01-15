@@ -33,7 +33,7 @@ const initialize = (appId: string, timeout: number = 0, cspNonce?: string) => {
         s.type = 'text/javascript';
         s.async = true;
         if (cspNonce) s.setAttribute('nonce', cspNonce);
-        s.src = 'https://widget.intercom.io/widget/' + appId;
+        s.src = 'http://localhost:9990/intercom/widget?appid' + appId;
         var x = d.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
       }, timeout);
