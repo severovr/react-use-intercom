@@ -3,5 +3,6 @@
 node_modules
 .cache
 dist
+!packages/react-use-intercom/dist
 
 .turbo

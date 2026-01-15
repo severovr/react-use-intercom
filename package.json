@@ -6,6 +6,21 @@
     "pnpm": "^10.2.0"
   },
   "type": "module",
+  "main": "./packages/react-use-intercom/dist/index.cjs",
+  "module": "./packages/react-use-intercom/dist/index.js",
+  "types": "./packages/react-use-intercom/dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./packages/react-use-intercom/dist/index.d.ts",
+        "default": "./packages/react-use-intercom/dist/index.js"
+      },
+      "require": {
+        "types": "./packages/react-use-intercom/dist/index.d.cts",
+        "default": "./packages/react-use-intercom/dist/index.cjs"
+      }
+    }
+  },
   "scripts": {
     "dev": "turbo run dev --parallel --filter=playground --filter=react-use-intercom",
     "dev:examples": "turbo run dev --parallel --filter=*-example --filter=react-use-intercom",
