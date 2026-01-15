@@ -11,7 +11,7 @@
  *
  * @see {@link https://developers.intercom.com/installing-intercom/docs/basic-javascript}
  */
-const initialize = (appId: string, timeout: number = 0, cspNonce?: string) => {
+const initialize = (appId: string, timeout: number = 0, cspNonce?: string, scriptUrl?: string) => {
   var w = window;
   var ic = w.Intercom;
   if (typeof ic === 'function') {
@@ -33,7 +33,7 @@ const initialize = (appId: string, timeout: number = 0, cspNonce?: string) => {
         s.type = 'text/javascript';
         s.async = true;
         if (cspNonce) s.setAttribute('nonce', cspNonce);
-        s.src = 'http://localhost:9990/intercom/widget?appid' + appId;
+        s.src = (scriptUrl || 'https://widget.intercom.io/widget/') + '?appid=' + appId;
         var x = d.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
       }, timeout);

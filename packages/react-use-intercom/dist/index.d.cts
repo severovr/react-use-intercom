@@ -496,6 +496,13 @@ type IntercomProviderProps = {
      * Content-Security-Policy nonce to use for the Intercom <script> tag during initializing
      */
     cspNonce?: string;
+    /**
+     * Custom URL for loading the Intercom widget script
+     *
+     * @remarks Useful for proxying the widget through your own server
+     * @default 'https://widget.intercom.io/widget/'
+     */
+    scriptUrl?: string;
 };
 
 declare const IntercomProvider: React.FC<React.PropsWithChildren<IntercomProviderProps>>;
