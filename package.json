@@ -1,5 +1,6 @@
 {
-  "private": true,
+  "name": "react-use-intercom",
+  "version": "5.5.0",
   "packageManager": "pnpm@10.2.0",
   "engines": {
     "node": "^22.13.1",
